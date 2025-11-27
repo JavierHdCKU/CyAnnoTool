@@ -1,0 +1,13 @@
+rule run_cyanno:
+    input:
+        matrix="input/data.matrix.gz",
+        labels="input/data.true_labels.gz"
+    output:
+        preds="output/{dataset}_predicted_labelsCyAnno.txt"
+    params:
+        outdir="output"
+    shell:
+        """
+        python ../run_cyanno.py {input.matrix} {input.labels} {params.outdir}
+        mv {params.outdir}/output_predictions.txt {output.preds}
+        """
