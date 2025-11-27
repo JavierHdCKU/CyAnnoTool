@@ -3,8 +3,6 @@ import sys
 import gzip
 import pandas as pd
 from pathlib import Path
-
-sys.path.insert(0, '/home/javier/CyAnno_module')
 from cyanno_pipeline.cyanno import CyAnnoClassifier
 
 def main(matrix_path, labels_path, output_path):
