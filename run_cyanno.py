@@ -5,7 +5,10 @@ import pandas as pd
 from pathlib import Path
 from cyanno_pipeline.cyanno import CyAnnoClassifier
 
-def main(matrix_path, labels_path, output_path):
+def main(matrix_path, labels_path, output_dir):
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     # Load matrix
     with gzip.open(matrix_path, 'rt') as f:
         matrix_df = pd.read_csv(f, sep=',')
@@ -30,11 +33,13 @@ def main(matrix_path, labels_path, output_path):
     # Predict on full dataset
     preds, _ = clf.predict(matrix_df)
 
-    # Save predictions (one label per line)
-    pd.Series(preds).to_csv(output_path, index=False, header=False)
+    # ALWAYS save inside the output directory as *output_predictions.txt*
+    pred_file = output_dir / "output_predictions.txt"
+    pd.Series(preds).to_csv(pred_file, index=False, header=False)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: run_cyanno.py <matrix.gz> <true_labels.gz> <output.txt>")
+        print("Usage: run_cyanno.py <matrix.gz> <true_labels.gz> <output_dir>")
         sys.exit(1)
     main(sys.argv[1], sys.argv[2], sys.argv[3])
