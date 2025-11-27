@@ -1,0 +1,5 @@
+markers: ['FSC-A', 'SSC-A', 'CD3', 'CD4', 'CD8', 'CD14', 'CD19', 'CD45', 'CD56', 'CD20']
+cell_types: ['T_cells_CD4', 'T_cells_CD8', 'B_cells', 'Monocytes', 'NK_cells']
+n_training_samples: 4000
+n_test_samples: 2000
+generated_files: {'training': '/home/javier/scina_module/data/training_data.csv', 'test': '/home/javier/scina_module/data/test_data.csv', 'unlabeled': '/home/javier/scina_module/data/unlabeled_data.csv'}

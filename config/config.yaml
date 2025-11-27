@@ -1,0 +1,28 @@
+# CyAnno Pipeline Configuration
+
+# Markers to use for classification
+markers:
+  - "FSC-A"
+  - "SSC-A" 
+  - "CD3"
+  - "CD4"
+  - "CD8"
+  - "CD14"
+  - "CD19"
+  - "CD45"
+  - "CD56"
+  - "CD20"
+
+# Data preprocessing
+normalize: true
+
+# Model parameters
+random_state: 42
+n_estimators: 100
+
+# Evaluation
+ground_truth_column: "cell_type"
+
+# Output options
+save_model: true
+generate_report: true

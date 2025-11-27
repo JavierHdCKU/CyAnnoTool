@@ -1,0 +1,102 @@
+{
+  "f1_weighted": 0.9925036564766915,
+  "f1_macro": 0.9925036564766915,
+  "f1_per_class": {
+    "B_cells": 1.0,
+    "Monocytes": 0.9962358845671268,
+    "NK_cells": 0.9937578027465668,
+    "T_cells_CD4": 0.9875621890547264,
+    "T_cells_CD8": 0.9849624060150376
+  },
+  "overall_accuracy": 0.9925,
+  "confusion_matrix": [
+    [
+      400,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      397,
+      2,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      398,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      397,
+      3
+    ],
+    [
+      0,
+      0,
+      1,
+      6,
+      393
+    ]
+  ],
+  "cell_types": [
+    "B_cells",
+    "Monocytes",
+    "NK_cells",
+    "T_cells_CD4",
+    "T_cells_CD8"
+  ],
+  "n_samples": 2000,
+  "classification_report": {
+    "B_cells": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 400.0
+    },
+    "Monocytes": {
+      "precision": 1.0,
+      "recall": 0.9925,
+      "f1-score": 0.9962358845671268,
+      "support": 400.0
+    },
+    "NK_cells": {
+      "precision": 0.9925187032418953,
+      "recall": 0.995,
+      "f1-score": 0.9937578027465668,
+      "support": 400.0
+    },
+    "T_cells_CD4": {
+      "precision": 0.9826732673267327,
+      "recall": 0.9925,
+      "f1-score": 0.9875621890547264,
+      "support": 400.0
+    },
+    "T_cells_CD8": {
+      "precision": 0.9874371859296482,
+      "recall": 0.9825,
+      "f1-score": 0.9849624060150376,
+      "support": 400.0
+    },
+    "accuracy": 0.9925,
+    "macro avg": {
+      "precision": 0.9925258312996552,
+      "recall": 0.9925,
+      "f1-score": 0.9925036564766915,
+      "support": 2000.0
+    },
+    "weighted avg": {
+      "precision": 0.9925258312996552,
+      "recall": 0.9925,
+      "f1-score": 0.9925036564766915,
+      "support": 2000.0
+    }
+  }
+}
